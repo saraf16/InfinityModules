@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './modal.css';
 
 const Modal = ({isOpen, onClosed} ) => {
+    console.log(styles);
     return (
-    <div className={`${styles.btn}`} onClick={onClosed}>
+    <div className={`${styles.btn}`}>
        ajflajflja
     </div>
     )
