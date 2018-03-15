@@ -6,7 +6,10 @@ const App = () => {
   return (
     <div>
       <p>React here!</p>
-      <Modal />
+      <Modal 
+        isOpen={this.state.isOpen}
+        onClosed={() => this.setState({isOpen: false})}>
+      </Model>
     </div>
   );
 };
