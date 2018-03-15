@@ -1,32 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './model.css';
+import styles from './modal.css';
 
-const Modal = ({isOpen, onClose} ) => {
+const Modal = ({isOpen, onClosed} ) => {
     return (
-    <p>Þetta er Modal</p>
+    <div className={`${styles.btn}`} onClick={onClosed}>
+       ajflajflja
+    </div>
     )
 }
 
-Modal.Title = ({childern}) => {
-    return <div>{childern}</div>
+Modal.Title = ({children}) => {
+    return <div>{children}</div>
 }
 
-Modal.Body = ({childern}) => {
-    return <div>{childern}</div>
+Modal.Body = ({children}) => {
+    return <div>{children}</div>
 }
 
-Modal.Footer = ({childern}) => {
-    return <div>{childern}</div>
+Modal.Footer = ({children}) => {
+    return <div>{children}</div>
 }
 
 Modal.propTypes = {
-    isOpen: PropTypes.bool,
-    onClose: PropTypes.func.isRequired
+    isOpen: PropTypes.bool.isRequired,
+    onClosed: PropTypes.func.isRequired,
+    children: PropTypes.node
 };
 
 Modal.defaultProps = {
-    isOpene: false
+    isOpen: false
 };
 
 export default Modal;

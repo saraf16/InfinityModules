@@ -19,8 +19,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        test: /\.css$/, exclude: /node_modules/, use: [
+          { loader: 'css-loader', options: { modules: true, localIdentName: '[name]__[local]__[hash:base64:5]' } }
+        ] 
       }
     ]
   },
